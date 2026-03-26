@@ -1,0 +1,100 @@
+{
+  "personal": {
+    "name": "Ji-Young Yang",
+    "title": "PhD Candidate in Analytical Chemistry",
+    "email": "jiyoung.jane.yang@gmail.com",
+    "phone": "+49 152 0487 5706",
+    "location": "Ulm, Germany",
+    "linkedin": "https://www.linkedin.com/in/ji-young-y-28a828142/",
+    "homepage": "https://jiyoungyang1.github.io/portfolio/",
+    "image": "images/prof_pic.jpg"
+  },
+  "education": [
+    {
+      "degree": "PhD in Analytical Chemistry",
+      "institution": "University Ulm",
+      "period": "11/2020 - 11/2025",
+      "location": "Ulm, Germany",
+      "details": "Thesis: 'Mechanistic Insights into Protein-Cosolute Interactions: From Denaturants to Stabilizers in Biopharmaceutical Formulations'. Dissertation submitted (11/2025); defense expected in Q1 2026."
+    },
+    {
+      "degree": "MSc in Bioinformatics/Molecular Biology",
+      "institution": "University of Applied Sciences Mittweida",
+      "period": "2018 - 2020",
+      "location": "Mittweida, DE",
+      "details": "Thesis: 'Bioinformatics approaches for characterization of quality attributes of biopharmaceuticals using statistical and machine learning based methods' (Note 1.0)"
+    },
+    {
+      "degree": "BEng in Bioengineering",
+      "institution": "Incheon National University",
+      "period": "2012 - 2017",
+      "location": "Incheon, South Korea",
+      "details": "Note 1.7"
+    }
+  ],
+  "experience": [
+    {
+      "role": "PhD Student",
+      "company": "Boehringer Ingelheim Pharma GmbH Co. KG",
+      "period": "11/2020 – 07/2024",
+      "location": "Biberach, Germany",
+      "description": "Industrial Ph.D. research in Analytics Development Biologicals, Early Stage Analytics Laboratory.",
+      "achievements": [
+        "Developed ML models for spectral deconvolution and pattern recognition in antibodies and excipients characterizations.",
+        "Developed Automated liquid handling and data analysis process with python for protein characterization studies.",
+        "Studies of antibody interactions with and cosolutes using classical MD simulations and analytical chemistry methods.",
+        "Designed protocols for antibody stability studies, including forced degradation and enzymatic digestion."
+      ]
+    },
+    {
+      "role": "Master Thesis & Internship",
+      "company": "Boehringer Ingelheim Pharma GmbH Co. KG",
+      "period": "03/2020 - 10/2020",
+      "location": "Biberach, Germany",
+      "description": "Thesis: 'Bioinformatics approaches for characterization of quality attributes of biopharmaceuticals using statistical and machine learning based methods'",
+      "achievements": [
+        "Developed ML model for pattern recognition of surfactant degradation profiles in drug formulations.",
+        "Developed neural network model to predict solvation energy of electrolytes based on their atomistic properties."
+      ]
+    },
+    {
+      "role": "Working Student in Quality Control",
+      "company": "BIOTYPE GmbH",
+      "period": "01/2019 – 10/2019",
+      "location": "Dresden, Germany",
+      "description": "Data validation and Testing Quality Control of molecular diagnostic solutions."
+    },
+    {
+      "role": "Trading Specialist for Pure Chemicals",
+      "company": "Samchun Pure Chemical Co. Ltd",
+      "period": "03/2018 – 09/2018",
+      "location": "Seoul, South Korea",
+      "description": "Managed compliant import/export of specialty chemicals across Europe, USA, Japan, and India."
+    }
+  ],
+  "skills": {
+    "languages": [
+      { "name": "Korean", "level": "Native" },
+      { "name": "English", "level": "Fluent C1-C2" },
+      { "name": "German", "level": "Fluent C1" }
+    ],
+    "programming": ["Python", "R", "SQL", "Bioinformatics", "Chemometrics", "Machine Learning (Pytorch, scikit-learn, Tensorflow, JAX)", "Data Science", "HPC", "Cloud Computing"],
+    "computational_chemistry": ["Protein-ligand interactions", "MD simulations", "Docking tools (GROMACS, NAMD, OpenMM)"],
+    "lab_techniques": ["Spectroscopy (UV/Vis, FTIR, CD, Fluorescence)", "Calorimetry (DSC, nanoDSF, DLS)", "Chromatography (LC-MS, UPLC-CAD)"],
+    "software": ["MS Office", "Excel VBA", "SIMCA", "Spotfire"]
+  },
+  "activities": [
+    {
+      "title": "Exchange program in Global Data Science",
+      "organization": "Boehringer Ingelheim",
+      "period": "01/2024 - 02/2024",
+      "details": "Project: 'AI and Data Science for Global Patent Search & Analytics'"
+    },
+    {
+      "title": "Co-Lead National Programmed",
+      "organization": "Nucleate Germany",
+      "period": "03/2023 - 01/2024",
+      "details": "Supporting future biotech entrepreneurs by recruiting experts in the biotech industry."
+    }
+  ]
+}
