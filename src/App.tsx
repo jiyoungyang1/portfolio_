@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Linkedin, 
-  Globe, 
-  GraduationCap, 
-  Briefcase, 
-  Code, 
-  FlaskConical, 
-  Award, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Globe,
+  GraduationCap,
+  Briefcase,
+  Code,
+  FlaskConical,
+  Award,
+  Atom,
   ExternalLink,
   ChevronRight,
   Download,
@@ -89,23 +90,23 @@ export default function App() {
       <main className="max-w-5xl mx-auto px-6 py-16 space-y-32">
         {/* Hero Section */}
         <section id="about" className="flex flex-col md:flex-row gap-16 items-center pt-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="flex-1 space-y-8"
           >
             <div className="space-y-4">
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-accent">Academic Portfolio</span>
-              <h1 className="text-6xl md:text-8xl leading-[0.9] font-serif">
-                Ji-Young <br />
-                <span className="italic font-light">Yang</span>
+              <h1 className="text-4xl md:text-5xl tracking-tight text-foreground sm:text-6xl">
+                <span className="font-normal">Ji-Young</span>{" "}
+                <span className="font-bold">Yang</span>
               </h1>
             </div>
-            
+
             <p className="text-xl text-secondary font-light max-w-2xl leading-relaxed">
               {cvData.personal.title}. <br />
-              <span className="text-primary/60">Specializing in</span> <span className="font-medium text-primary">Bioinformatics</span>, 
-              <span className="font-medium text-primary"> Machine Learning</span>, <span className="text-primary/60">and</span> 
+              <span className="text-primary/60">Specializing in</span> <span className="font-medium text-primary">Bioinformatics</span>,
+              <span className="font-medium text-primary"> Machine Learning</span>, <span className="text-primary/60">and</span>
               <span className="font-medium text-primary"> Biopharmaceutical Formulations</span>.
             </p>
 
@@ -117,15 +118,15 @@ export default function App() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             className="relative group"
           >
             <div className="absolute inset-0 bg-accent rounded-2xl rotate-6 group-hover:rotate-3 transition-transform duration-500 opacity-20" />
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border border-border shadow-2xl bg-white">
-              <img 
-                src={cvData.personal.image} 
+              <img
+                src={cvData.personal.image}
                 alt={cvData.personal.name}
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
@@ -139,7 +140,7 @@ export default function App() {
           <h2 className="section-title"><GraduationCap className="text-accent" /> Education</h2>
           <div className="grid gap-12">
             {cvData.education.map((edu, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -167,7 +168,7 @@ export default function App() {
           <h2 className="section-title"><Briefcase className="text-accent" /> Experience</h2>
           <div className="space-y-16">
             {cvData.experience.map((exp, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -208,7 +209,7 @@ export default function App() {
               <p className="text-secondary/60 text-sm italic">Published 6 peer-reviewed articles (5 first-author) in high-impact physical chemistry journals (Q1-Q2).</p>
             </div>
             <div className="flex bg-border/20 p-1 rounded-full self-start">
-              <button 
+              <button
                 onClick={() => setActiveTab('selected')}
                 className={cn(
                   "px-6 py-2 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all",
@@ -217,7 +218,7 @@ export default function App() {
               >
                 Selected
               </button>
-              <button 
+              <button
                 onClick={() => setActiveTab('all')}
                 className={cn(
                   "px-6 py-2 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all",
@@ -231,7 +232,7 @@ export default function App() {
 
           <div className="grid gap-8">
             {filteredPubs.map((pub, i) => (
-              <motion.div 
+              <motion.div
                 key={pub.citationKey}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -239,8 +240,8 @@ export default function App() {
                 className="group p-8 rounded-3xl border border-border bg-white hover:border-accent/30 transition-all duration-500 flex flex-col md:flex-row gap-10"
               >
                 <div className="w-full md:w-40 h-40 bg-background rounded-2xl overflow-hidden shrink-0 flex items-center justify-center border border-border/50 group-hover:scale-105 transition-transform duration-500">
-                  <img 
-                    src={`https://raw.githubusercontent.com/jiyoungyang1/portfolio/master/assets/img/publication_preview/${pub.entryTags.preview}`}
+                  <img
+                    src={`images/${pub.entryTags.preview}`}
                     alt={pub.entryTags.title}
                     className="w-full h-full object-contain p-4"
                     onError={(e) => {
@@ -260,24 +261,24 @@ export default function App() {
                     </div>
                     <h3 className="text-2xl font-bold leading-tight group-hover:text-accent transition-colors">{pub.entryTags.title}</h3>
                   </div>
-                  
+
                   <p className="text-sm text-secondary/80 font-medium">{pub.entryTags.author}</p>
-                  
+
                   <p className="text-xs font-mono text-accent/80 uppercase tracking-wider">
                     {pub.entryTags.journal || pub.entryTags.booktitle}
                   </p>
-                  
+
                   {pub.entryTags.abstract && (
                     <p className="text-sm text-secondary/60 leading-relaxed line-clamp-3 italic">
                       {pub.entryTags.abstract}
                     </p>
                   )}
-                  
+
                   <div className="flex gap-6 pt-4">
                     {pub.entryTags.doi && (
-                      <a 
-                        href={`https://doi.org/${pub.entryTags.doi}`} 
-                        target="_blank" 
+                      <a
+                        href={`https://doi.org/${pub.entryTags.doi}`}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="text-xs font-bold flex items-center gap-2 hover:text-accent transition-colors"
                       >
@@ -285,9 +286,9 @@ export default function App() {
                       </a>
                     )}
                     {pub.entryTags.url && (
-                      <a 
-                        href={pub.entryTags.url} 
-                        target="_blank" 
+                      <a
+                        href={pub.entryTags.url}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="text-xs font-bold flex items-center gap-2 hover:text-accent transition-colors"
                       >
@@ -306,7 +307,7 @@ export default function App() {
           <h2 className="section-title"><Code className="text-accent" /> Skills</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             <SkillCategory title="Programming" items={cvData.skills.programming} icon={<Code size={20} />} />
-            <SkillCategory title="Computational Chemistry" items={cvData.skills.computational_chemistry} icon={<FlaskConical size={20} />} />
+            <SkillCategory title="Computational Chemistry" items={cvData.skills.computational_chemistry} icon={<Atom size={20} />} />
             <SkillCategory title="Lab Techniques" items={cvData.skills.lab_techniques} icon={<FlaskConical size={20} />} />
             <div className="space-y-6">
               <h4 className="font-bold flex items-center gap-3 text-primary text-xl">
@@ -319,8 +320,13 @@ export default function App() {
                       <span className="font-bold">{lang.name}</span>
                       <span className="text-xs text-secondary/60">{lang.level}</span>
                     </div>
+                    {lang.details && (
+                      <p className="text-[10px] text-secondary/50 leading-tight">
+                        {lang.details}
+                      </p>
+                    )}
                     <div className="h-1 bg-border/30 rounded-full overflow-hidden">
-                      <motion.div 
+                      <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: lang.level.includes('Native') ? '100%' : '85%' }}
                         className="h-full bg-accent"
@@ -354,7 +360,7 @@ export default function App() {
               ))}
             </div>
           </div>
-          
+
           <div className="space-y-12">
             <h2 className="section-title"><Award className="text-accent" /> Activities</h2>
             <div className="space-y-10">
@@ -429,9 +435,9 @@ function SkillCategory({ title, items, icon }: { title: string, items: string[],
 
 function SocialButton({ icon, href }: { icon: React.ReactNode, href: string }) {
   return (
-    <a 
-      href={href} 
-      target="_blank" 
+    <a
+      href={href}
+      target="_blank"
       rel="noopener noreferrer"
       className="w-14 h-14 rounded-2xl bg-background border border-border flex items-center justify-center text-secondary hover:bg-accent hover:text-white hover:border-accent transition-all duration-300 hover:-translate-y-1 shadow-sm"
     >

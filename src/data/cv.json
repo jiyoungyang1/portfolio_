@@ -3,7 +3,6 @@
     "name": "Ji-Young Yang",
     "title": "PhD Candidate in Analytical Chemistry",
     "email": "jiyoung.jane.yang@gmail.com",
-    "phone": "+49 152 0487 5706",
     "location": "Ulm, Germany",
     "linkedin": "https://www.linkedin.com/in/ji-young-y-28a828142/",
     "homepage": "https://jiyoungyang1.github.io/portfolio/",
@@ -15,7 +14,7 @@
       "institution": "University Ulm",
       "period": "11/2020 - 11/2025",
       "location": "Ulm, Germany",
-      "details": "Thesis: 'Mechanistic Insights into Protein-Cosolute Interactions: From Denaturants to Stabilizers in Biopharmaceutical Formulations'. Dissertation submitted (11/2025); defense expected in Q1 2026."
+      "details": "Thesis: 'Mechanistic Insights into Protein-Cosolute Interactions: From Denaturants to Stabilizers in Biopharmaceutical Formulations'. Dissertation submitted (11/2025); currently under review, defense expected in Q1 2026."
     },
     {
       "degree": "MSc in Bioinformatics/Molecular Biology",
@@ -42,6 +41,7 @@
       "achievements": [
         "Developed ML models for spectral deconvolution and pattern recognition in antibodies and excipients characterizations.",
         "Developed Automated liquid handling and data analysis process with python for protein characterization studies.",
+        "Data management and lightweight data engineering for daily experimental outputs, supporting structured storage, automation, and reproducible analysis.",
         "Studies of antibody interactions with and cosolutes using classical MD simulations and analytical chemistry methods.",
         "Designed protocols for antibody stability studies, including forced degradation and enzymatic digestion."
       ]
@@ -53,8 +53,8 @@
       "location": "Biberach, Germany",
       "description": "Thesis: 'Bioinformatics approaches for characterization of quality attributes of biopharmaceuticals using statistical and machine learning based methods'",
       "achievements": [
-        "Developed ML model for pattern recognition of surfactant degradation profiles in drug formulations.",
-        "Developed neural network model to predict solvation energy of electrolytes based on their atomistic properties."
+        "Developed ML model for pattern recognition of surfactant degradation profiles in drug formulations, enabling classification and clustering of degraded lipid chains from UPLC-CAD data.",
+        "Developed neural network model to predict solvation energy of electrolytes based on their atomistic properties achieved by conceptual Density Functional Theory principles."
       ]
     },
     {
@@ -69,19 +69,79 @@
       "company": "Samchun Pure Chemical Co. Ltd",
       "period": "03/2018 – 09/2018",
       "location": "Seoul, South Korea",
-      "description": "Managed compliant import/export of specialty chemicals across Europe, USA, Japan, and India."
+      "description": "Utilized chemical product metadata, safety documentation (SDS, CoA), and regulatory data (K-REACH, REACH, TSCA) to support compliant import/export of specialty chemicals across Europe, the USA, Japan, and India. Analyzed logistics and pricing data to coordinate international shipments, negotiate freight costs, and adapt pricing strategies to changing market conditions."
     }
   ],
   "skills": {
     "languages": [
-      { "name": "Korean", "level": "Native" },
-      { "name": "English", "level": "Fluent C1-C2" },
-      { "name": "German", "level": "Fluent C1" }
+      {
+        "name": "Korean",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent C1-C2",
+        "details": "Academic and business proficiency with experience in international scientific presentations and publications"
+      },
+      {
+        "name": "German",
+        "level": "Fluent C1",
+        "details": "Professional working proficiency; extensive experience in German-speaking corporate environments"
+      }
     ],
-    "programming": ["Python", "R", "SQL", "Bioinformatics", "Chemometrics", "Machine Learning (Pytorch, scikit-learn, Tensorflow, JAX)", "Data Science", "HPC", "Cloud Computing"],
-    "computational_chemistry": ["Protein-ligand interactions", "MD simulations", "Docking tools (GROMACS, NAMD, OpenMM)"],
-    "lab_techniques": ["Spectroscopy (UV/Vis, FTIR, CD, Fluorescence)", "Calorimetry (DSC, nanoDSF, DLS)", "Chromatography (LC-MS, UPLC-CAD)"],
-    "software": ["MS Office", "Excel VBA", "SIMCA", "Spotfire"]
+    "programming": [
+      "Python",
+      "R",
+      "SQL",
+      "Machine Learning",
+      "Pytorch",
+      "scikit-learn",
+      "Tensorflow",
+      "JAX",
+      "Data Science",
+      "seaborn",
+      "plotly",
+      "pandas",
+      "streamlit",
+      "Data management and engineering",
+      "HPC",
+      "Bash",
+      "Slurm",
+      "Linux",
+      "Cloud Computing",
+      "Databricks",
+      "Bitbucket"
+    ],
+    "computational_chemistry": [
+      "MD simulation and docking tools",
+      "GROMACS",
+      "NAMD",
+      "OpenMM",
+      "Chemometrics",
+      "RDkit",
+      "MDAnalysis"
+    ],
+    "lab_techniques": [
+      "Spectroscopy",
+      "UV/Vis",
+      "FTIR",
+      "CD",
+      "Fluorescence",
+      "Calorimetry",
+      "Light Scattering",
+      "DSC",
+      "nanoDSF",
+      "DLS",
+      "Chromatography",
+      "LC-MS",
+      "UPLC-CAD"
+    ],
+    "software": [
+      "MS Office",
+      "Excel VBA",
+      "SIMCA",
+      "Spotfire"
+    ]
   },
   "activities": [
     {
@@ -94,7 +154,117 @@
       "title": "Co-Lead National Programmed",
       "organization": "Nucleate Germany",
       "period": "03/2023 - 01/2024",
-      "details": "Supporting future biotech entrepreneurs by recruiting experts in the biotech industry."
+      "details": "Supporting biotech entrepreneurs by recruiting experts in industry, IP, and business development for the 'Activator' program."
+    },
+    {
+      "title": "Exchange program in Biochemistry (German)",
+      "organization": "University Hohenheim",
+      "period": "2016 - 2017",
+      "location": "Stuttgart, Germany"
+    },
+    {
+      "title": "Exchange program in Business Management (English)",
+      "organization": "HfWU Nürtingen-Geislingen",
+      "period": "2016 - 2017",
+      "location": "Nürtingen-Geislingen, Germany"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Thermal Stability of IgG4 Monoclonal Antibodies: Ambiguous Roles of Co-Solutes, Excipients and Salts in Conformational and Colloidal States",
+      "authors": "Ji Young Yang, Oliver Burkert, Boris Mizaikoff, Jens Smiatek",
+      "journal": "Molecular Pharmaceutics",
+      "year": 2026,
+      "doi": "10.1021/acs.molpharmaceut.5c01851",
+      "url": "https://doi.org/10.1021/acs.molpharmaceut.5c01851",
+      "note": "Article ASAP",
+      "selected": true,
+      "preview": "abstract_thermal.webp"
+    },
+    {
+      "title": "Influence of Co-Solutes and Solvents on Diffusion Interaction Parameters in Multicomponent Solutions: New Insights through the Kirkwood--Buff Theory",
+      "authors": "Jiyoung Yang, Matthias Brosz, Niklas Adebar, Oliver Burkert, Moritz Schulze, Jens Smiatek",
+      "journal": "Journal of Physical Chemistry B",
+      "year": 2025,
+      "volume": "129",
+      "number": "44",
+      "pages": "10381--10391",
+      "doi": "10.1021/acs.jpcb.5c03102",
+      "url": "https://pubs.acs.org/doi/10.1021/acs.jpcb.5c03102",
+      "selected": true,
+      "preview": "abstract_kD.gif"
+    },
+    {
+      "title": "Multidomain Protein--Urea Interactions: Differences in Binding Behavior Lead to Different Destabilization Tendencies for Monoclonal Antibodies",
+      "authors": "Ji Young Yang, Oliver Burkert, Boris Mizaikoff, Jens Smiatek",
+      "journal": "Journal of Physical Chemistry B",
+      "year": 2024,
+      "volume": "128",
+      "number": "42",
+      "pages": "10408--10416",
+      "doi": "10.1021/acs.jpcb.4c05358",
+      "url": "https://pubs.acs.org/doi.org/10.1021/acs.jpcb.4c05358",
+      "selected": true,
+      "preview": "abstract_multidomain.webp"
+    },
+    {
+      "title": "Impact of Urea on Monoclonal Antibodies: Multiple Destabilization and Aggregation Effects for Therapeutic Immunoglobulin G Proteins",
+      "authors": "Ji Young Yang, Oliver Burkert, Boris Mizaikoff, Jens Smiatek",
+      "journal": "ACS Omega",
+      "year": 2024,
+      "volume": "9",
+      "number": "5",
+      "pages": "5517--5522",
+      "doi": "10.1021/acsomega.3c07323",
+      "url": "https://pubs.acs.org/doi/10.1021/acsomega.3c07323",
+      "selected": false,
+      "preview": "abstract_impact_urea.gif"
+    },
+    {
+      "title": "Combination of Explainable Machine Learning and Conceptual Density Functional Theory: Applications for the Study of Key Solvation Mechanisms",
+      "authors": "I-Ting Ho, Milena Matysik, Liliana Montano Herrera, Jiyoung Yang, Ralph Joachim Guderlei, Michael Laussegger, Bernhard Schrantz, Regine Hammer, Ramón Alain Miranda-Quintana, Jens Smiatek",
+      "journal": "Physical Chemistry Chemical Physics",
+      "year": 2022,
+      "volume": "24",
+      "pages": "28314--28324",
+      "doi": "10.1039/D2CP04428E",
+      "url": "https://pubs.rsc.org/en/content/articlehtml/2022/cp/d2cp04428e"
+    },
+    {
+      "title": "Artificial Neural Networks for the Prediction of Solvation Energies Based on Experimental and Computational Data",
+      "authors": "Jiyoung Yang, Matthias J. Knape, Oliver Burkert, Virginia Mazzini, Alexander Jung, Vincent S. J. Craig, Ramón Alain Miranda-Quintana, Erich Bluhmki, Jens Smiatek",
+      "journal": "Physical Chemistry Chemical Physics",
+      "year": 2020,
+      "volume": "22",
+      "pages": "24359--24364",
+      "doi": "10.1039/D0CP03701J",
+      "url": "https://pubs.rsc.org/en/content/articlelanding/2020/cp/d0cp03701j"
+    }
+  ],
+  "conferences": [
+    {
+      "title": "Protein-Cosolute Interactions and Drug Formulation Stability",
+      "authors": "Ji Young Yang, Oliver Burkert, Boris Mizaikoff, Jens Smiatek",
+      "event": "Discover BMB 2023",
+      "year": 2023,
+      "location": "Seattle, USA",
+      "type": "Poster Presentation"
+    },
+    {
+      "title": "Molecular Dynamics Simulations of Antibody Systems",
+      "authors": "Ji Young Yang, Oliver Burkert, Boris Mizaikoff, Jens Smiatek",
+      "event": "DPG Frühjahrstagung 2023",
+      "year": 2023,
+      "location": "Dresden, Germany",
+      "type": "Oral Presentation"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Engagement Individual Award",
+      "organization": "Boehringer Ingelheim",
+      "date": "06/2021",
+      "details": "BI OPEN Global Data Science Challenge for Lung Acoustic Signal Detection"
     }
   ]
 }
