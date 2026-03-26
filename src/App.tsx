@@ -23,6 +23,8 @@ import cvData from './data/cv.json';
 import { cn } from './lib/utils';
 // @ts-ignore
 import bibSource from './data/publications.bib?raw';
+// @ts-ignore
+import cvPdf from './data/CV_202603.pdf';
 
 // Types for BibTeX
 interface Publication {
@@ -113,7 +115,7 @@ export default function App() {
               <ContactLink icon={<Mail size={18} />} href={`mailto:${cvData.personal.email}`} label={cvData.personal.email} />
               <ContactLink icon={<MapPin size={18} />} label={cvData.personal.location} />
               <ContactLink icon={<Linkedin size={18} />} href={cvData.personal.linkedin} label="LinkedIn" />
-              <ContactLink icon={<Globe size={18} />} href={cvData.personal.homepage} label="Portfolio" />
+              <ContactLink icon={<FileText size={18} />} href={cvPdf} label="CV" />
             </div>
           </motion.div>
 
