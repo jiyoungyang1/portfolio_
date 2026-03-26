@@ -17,7 +17,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout 
         uses: actions/checkout@v4
 
       - name: Setup Node.js ⚙️
@@ -31,7 +31,7 @@ jobs:
           npm install
           npm run build
 
-      - name: Setup Pages 🛠️
+      - name: Setup Pages 
         uses: actions/configure-pages@v4
 
       - name: Upload artifact 📤
@@ -39,6 +39,6 @@ jobs:
         with:
           path: './dist'
 
-      - name: Deploy to GitHub Pages 🚀
+      - name: Deploy to GitHub Pages 
         id: deployment
         uses: actions/deploy-pages@v4
