@@ -48,6 +48,7 @@ interface Publication {
 export default function App() {
   const [publications, setPublications] = useState<Publication[]>([]);
   const [activeTab, setActiveTab] = useState<'all' | 'selected'>('selected');
+  const [currentPage, setCurrentPage] = useState<'home' | 'projects'>('home');
 
   useEffect(() => {
     try {
@@ -72,22 +73,20 @@ export default function App() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="font-serif text-xl font-bold tracking-tighter">JY.YANG</span>
-          <div className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest text-secondary/60">
-            <a href="#about" className="hover:text-accent transition-colors">About</a>
-            <a href="#education" className="hover:text-accent transition-colors">Education</a>
-            <a href="#experience" className="hover:text-accent transition-colors">Experience</a>
-            <a href="#publications" className="hover:text-accent transition-colors">Publications</a>
-            <a href="#skills" className="hover:text-accent transition-colors">Skills</a>
+          <button onClick={() => { setCurrentPage('home'); window.scrollTo(0, 0); }} className="font-serif text-xl font-bold tracking-tighter hover:text-accent transition-colors">JY.YANG</button>
+          <div className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest text-secondary/60 items-center">
+            <a href="#about" onClick={() => setCurrentPage('home')} className="hover:text-accent transition-colors">About</a>
+            <a href="#education" onClick={() => setCurrentPage('home')} className="hover:text-accent transition-colors">Education</a>
+            <a href="#experience" onClick={() => setCurrentPage('home')} className="hover:text-accent transition-colors">Experience</a>
+            <a href="#publications" onClick={() => setCurrentPage('home')} className="hover:text-accent transition-colors">Publications</a>
+            <a href="#skills" onClick={() => setCurrentPage('home')} className="hover:text-accent transition-colors">Skills</a>
+            <button onClick={() => { setCurrentPage('projects'); window.scrollTo(0, 0); }} className={cn("hover:text-accent transition-colors uppercase", currentPage === 'projects' && "text-accent")}>Projects</button>
           </div>
-          <button className="bg-primary text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-accent transition-all flex items-center gap-2 shadow-lg shadow-primary/10">
-            <Download size={14} />
-            Resume
-          </button>
         </div>
       </nav>
 
-      <main className="max-w-5xl mx-auto px-6 py-16 space-y-32">
+      {currentPage === 'home' ? (
+        <main className="max-w-5xl mx-auto px-6 py-16 space-y-32">
         {/* Hero Section */}
         <section id="about" className="flex flex-col md:flex-row gap-16 items-center pt-8">
           <motion.div
@@ -202,7 +201,7 @@ export default function App() {
         </section>
 
         {/* Publications Section */}
-        <section id="publications" className="space-y-12">
+        <section id="publications" className="space-y-12 scroll-mt-24">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="space-y-2">
               <h2 className="section-title mb-0"><FileText className="text-accent" /> Publications</h2>
@@ -378,6 +377,21 @@ export default function App() {
           </div>
         </section>
       </main>
+      ) : (
+        <main className="max-w-5xl mx-auto px-6 py-16 space-y-16 min-h-[70vh]">
+          <section className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">Projects</h1>
+            <p className="text-xl text-secondary font-light">
+              Explore my latest projects below.
+            </p>
+            <div className="p-16 mt-8 border-2 border-border border-dashed rounded-3xl flex flex-col items-center justify-center bg-white/50 min-h-[400px]">
+              <Code size={48} className="text-accent/40 mb-4" />
+              <p className="text-secondary/80 font-medium">Projects content is coming soon.</p>
+              <p className="text-sm text-secondary/60 mt-2">I am currently preparing detailed case studies to share here.</p>
+            </div>
+          </section>
+        </main>
+      )}
 
       <footer className="border-t border-border py-20 bg-white">
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12">
